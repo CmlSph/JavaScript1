@@ -1,5 +1,6 @@
 var items = [];
-console.log("The value of the array should be '0'");
+console.log(items);
+console.log("The value of the array should be []");
 
 var myAnimals = ["birds", "cats", "dogs"];
 console.log(myAnimals);
