@@ -1,7 +1,13 @@
 const cartForParty = { beers:2.20, chips:3.60, bread : 2.40, cheese:3.75, tomatoes: 1.25}
 
-function roundNum(num) {//This section is written to round the part after the comma.
-    return Math.round(num*100)/100;
+// function roundNum(num) {//This section is written to round the part after the comma.
+//     return Math.round(num*100)/100;
+// }
+function roundNum (num){// We can use .toFixed(2) to return two digits afterm the comma
+
+  my_float = num.toFixed(2);
+  
+  return my_float
 }
 
 function calculateTotalPrice( cartForParty ) {              

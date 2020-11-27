@@ -24,10 +24,16 @@ function validateSumOfNumbers(creditCardNumber){
     });
     return sum > 16 ? true : false;
 }
+function hasSpaces(creditCardNumber) {
+    return creditCardNumber.includes(" ") ? true : false
+        
+}
 
 function validateCreditNumber(creditCardNumber) {
     if (!validateLength(creditCardNumber)) {
         return 'Invalid! The length of the input ' + creditCardNumber + ' should be equal to 16!';
+    } else if (hasSpaces(creditCardNumber)) {
+        return 'Invalid! Your input ' + creditCardNumber +  ' has empty spaces!'; 
     } else if (!validateAllNumbers(creditCardNumber)) {
         return 'Invalid! The input ' + creditCardNumber + ' should contain only numbers!';
     } else if (!validateDifferentDigits(creditCardNumber)){
@@ -44,3 +50,5 @@ function validateCreditNumber(creditCardNumber) {
 console.log(validateCreditNumber('a92332119c011112'));
 console.log(validateCreditNumber('4444444444444444')); 
 console.log(validateCreditNumber('6666666666661666'));
+
+console.log(validateCreditNumber('1111 111 1111 11'));
